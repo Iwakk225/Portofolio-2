@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* =============================================
+   DESIGN TOKENS - Modern Manga/Neo-Brutalist
+   ============================================= */
+:root {
+  --color-bg: #F8F9FA;
+  --color-text: #000000;
+  --color-accent: #00C2FF;
+  --color-accent-dark: #0090CC;
+  --color-white: #FFFFFF;
+  --color-gray-light: #E9ECEF;
+  --color-gray-mid: #6C757D;
+  --shadow-neo: 4px 4px 0px 0px #000000;
+  --shadow-neo-lg: 6px 6px 0px 0px #000000;
+  --shadow-neo-accent: 4px 4px 0px 0px #00C2FF;
+}
+
+/* =============================================
+   BASE STYLES
+   ============================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =============================================
+   NEO-BRUTALIST UTILITY CLASSES
+   ============================================= */
+
+/* Neo shadow card */
+.neo-card {
+  border: 2px solid #000000;
+  box-shadow: var(--shadow-neo);
+  background: #FFFFFF;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.neo-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-neo-lg);
+}
+
+/* Accent neo card */
+.neo-card-accent {
+  border: 2px solid #000000;
+  box-shadow: var(--shadow-neo-accent);
+  background: #FFFFFF;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.neo-card-accent:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #00C2FF;
+}
+
+/* Neo button - black */
+.btn-neo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  background: #000000;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.btn-neo:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+.btn-neo:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+/* Neo button - outline */
+.btn-neo-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  background: transparent;
+  color: #000000;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.btn-neo-outline:hover {
+  background: #000000;
+  color: #FFFFFF;
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+.btn-neo-outline:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+/* Neo button - accent */
+.btn-neo-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  background: #00C2FF;
+  color: #000000;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.btn-neo-accent:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+.btn-neo-accent:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+/* Neo input */
+.neo-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+  background: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  outline: none;
+  transition: box-shadow 0.12s ease, transform 0.12s ease;
+  border-radius: 0;
+}
+.neo-input:focus {
+  box-shadow: 5px 5px 0px 0px #00C2FF;
+  outline: none;
+}
+
+/* Neo badge / skill tag */
+.neo-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px 0px #000000;
+  background: #FFFFFF;
+  letter-spacing: 0.04em;
+}
+.neo-badge-accent {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 0px 0px #00C2FF;
+  background: #00C2FF;
+  color: #000000;
+  letter-spacing: 0.04em;
+}
+
+/* Section headings - manga style */
+.section-title {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  height: 6px;
+  background: #00C2FF;
+  width: 100%;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+/* Speech bubble (guestbook) */
+.speech-bubble {
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px 0px #000000;
+  background: #FFFFFF;
+  position: relative;
+  padding: 1rem 1.25rem;
+}
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 20px;
+  border-width: 14px 10px 0;
+  border-style: solid;
+  border-color: #000000 transparent transparent;
+}
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 22px;
+  border-width: 11px 8px 0;
+  border-style: solid;
+  border-color: #FFFFFF transparent transparent;
+}
+
+/* Timeline line */
+.timeline-line {
+  position: relative;
+  padding-left: 2.5rem;
+}
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 0.55rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #000000;
+}
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #000000;
+  background: #00C2FF;
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+/* Scrollbar manga style */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F8F9FA; }
+::-webkit-scrollbar-thumb { background: #000000; }
